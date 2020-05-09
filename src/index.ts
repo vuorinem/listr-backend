@@ -100,7 +100,7 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 io.on('connection', socket => {
     console.log(`User ${socket.id} connected`);
 
-    socket.on('disconnect', function () {
+    socket.on('disconnect', () => {
         console.log(`User ${socket.id} disconnected`);
     });
 });
